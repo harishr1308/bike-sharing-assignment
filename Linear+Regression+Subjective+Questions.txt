@@ -1,0 +1,45 @@
+Assignment-based Subjective Questions
+1. From your analysis of the categorical variables from the dataset, what could you infer about
+their effect on the dependent variable? 
+-> From the analysis of the categorical variables from the dataset, it can be inferred that certain categories may have a stronger correlation to the dependent variable than others. For example, if a particular category has a higher average value of the dependent variable than the overall average, it could be inferred that this category has a positive effect on the dependent variable. Similarly, if a particular category has a lower average value of the dependent variable than the overall average, it could be inferred that this category has a negative effect on the dependent variable.
+2. Why is it important to use drop_first=True during dummy variable creation? 
+-> Drop_first=True helps to avoid the dummy variable trap. The dummy variable trap occurs when one or more variables in a regression model are multicollinear- that is, they are highly correlated. When this happens, the coefficients in the model become unstable and hard to interpret. By dropping the first level of a categorical variable, you can help to avoid this problem. Additionally, it can help to reduce the number of features in your model and make it easier to interpret.
+3. Looking at the pair-plot among the numerical variables, which one has the highest correlation
+with the target variable?
+-> The variable with the highest correlation with the target variable is the 'atemp' and 'temp' variable.
+4. How did you validate the assumptions of Linear Regression after building the model on the
+training set?
+-> According to this assumption there is linear relationship between the features and target. Linear regression captures only linear relationship. This can be validated by plotting a scatter plot between the features and the target.
+5. Based on the final model, which are the top 3 features contributing significantly towards
+explaining the demand of the shared bikes?
+-> "atemp"
+"temp"
+"cnt"
+
+General Subjective Questions
+1. Explain the linear regression algorithm in detail.
+-> Linear regression is a statistical method used to find the linear relationship between a dependent variable (y) and one or more independent variables (x). It is used to estimate the values of the dependent variable based on the values of the independent variables. The linear regression algorithm is based on the assumption that there is a linear relationship between the dependent and independent variables.
+
+The linear regression algorithm starts by creating a linear equation (y=mx+b) where m is the slope of the line and b is the y-intercept. The linear equation is then used to calculate the predicted value of the dependent variable based on the values of the independent variables.
+
+The linear regression algorithm then uses an optimization technique, such as least squares or gradient descent, to find the best linear equation that fits the data. This involves finding the values of m and b that minimize the sum of the squared errors (the difference between the actual value of the dependent variable and the predicted value).
+
+Once the best linear equation is found, it is used to make predictions on new data points. The linear regression algorithm can also be used to evaluate the strength of the relationship between the dependent and independent variables.
+
+
+2. Explain the Anscombe’s quartet in detail.
+-> Anscombe's quartet is a set of four datasets that were created by statistician Francis Anscombe in 1973. The set of datasets consists of two variables (x and y) for each of the four datasets, and all four datasets have identical simple descriptive statistics, such as mean, variance, and correlation. However, when graphed, the four datasets appear to be completely different from each other. This is due to the presence of outliers, differences in distributions, and other features that are not discernible from the simple descriptive statistics.
+
+The quartet demonstrates the importance of looking beyond simple descriptive statistics when analyzing data, as the same statistics can lead to drastically different conclusions depending on the underlying data. It also serves as an example of the dangers of relying too heavily on statistics without understanding the context of the data.
+
+3. What is Pearson’s R?
+-> Pearson’s R is a measure of the strength of the linear relationship between two variables. It is a correlation coefficient that ranges from -1 to 1. A value of 1 indicates a perfect positive linear relationship, a value of -1 indicates a perfect negative linear relationship, and a value of 0 indicates no linear relationship.
+
+4. What is scaling? Why is scaling performed? What is the difference between normalized scaling and standardized scaling?
+-> Scaling is the process of transforming data into a common numerical range or scale. It is typically performed in order to make data easier to analyze and compare. Normalized scaling is the process of transforming data into a range that typically ranges from 0 to 1, while standardized scaling transforms data into a standard normal distribution with a mean of 0 and a standard deviation of 1.
+
+5. You might have observed that sometimes the value of VIF is infinite. Why does this happen?
+-> This happens when two or more independent variables are perfectly correlated - that is, 100% linearly related. In this case, the inverse of the correlation coefficient will be zero, leading to an infinite VIF value.
+
+6. What is a Q-Q plot? Explain the use and importance of a Q-Q plot in linear regression.
+-> A Q-Q plot (Quantile-Quantile plot) is a graphical tool used to compare two probability distributions by plotting their quantiles against each other. It provides a visual representation of the differences between two datasets, allowing us to compare the distributions of two sets of data. In linear regression, a Q-Q plot can be used to assess the normality of the residuals of the model. If the residuals are not normally distributed, it can indicate that the linear model is not an adequate fit for the data. This can be seen in the Q-Q plot, where the points will deviate from the diagonal line, indicating that the data is not normally distributed. The Q-Q plot is therefore an important tool to assess the accuracy of a linear regression model.
